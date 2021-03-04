@@ -5,8 +5,11 @@
     <PackAsTool>true</PackAsTool>
     <Authors>Ole Kristian Losvik</Authors>
     <Company>Losol AS</Company>
-    <Version>0.0.1.0</Version>
+    <Version>0.0.2.0</Version>
     <ToolCommandName>oxo</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.20574.7" />
+  </ItemGroup>
 </Project>

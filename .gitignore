@@ -1,3 +1,4 @@
 bin
 nupkg
 obj
+.vscode
