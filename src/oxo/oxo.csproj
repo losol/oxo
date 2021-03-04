@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <PackAsTool>true</PackAsTool>
+    <Authors>Ole Kristian Losvik</Authors>
+    <Company>Losol AS</Company>
+    <Version>0.0.1.0</Version>
+    <ToolCommandName>oxo</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+  </PropertyGroup>
+</Project>
