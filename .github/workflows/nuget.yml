@@ -1,0 +1,25 @@
+name: Publish to nuget
+
+on:
+  push:
+    branches: [ master ]
+    paths: 'src/oxo/oxo.csproj'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # Packs tool
+      - name: Pack tool
+        run: dotnet pack src/oxo/oxo.csproj -c Release
+
+      # Publishes tool to Nughet
+      - name: Publish tool
+        run: dotnet nuget push ./**/*.nupkg 
+            --api-key ${{ secrets.NUGET_API_KEY }} 
+            --skip-duplicate
+            --source https://api.nuget.org/v3/index.json
+            --no-symbols true
